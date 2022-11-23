@@ -1,0 +1,129 @@
+/*
+ * Style for Preisig-Schwellbrunn website
+ * Author: Luca Bosin - bosin.ch
+ * 
+ * This design is using the mobile first approach due to the fact that the
+ * website's main purpose is to be a landing page shown after a QR code scan.
+ */
+
+/* General */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: var(--color-text);
+  background-image: var(--gradient);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.normal-text {
+  font-weight: 400;
+}
+
+.bold-text,
+.page-title,
+.section-title,
+.subsection-title {
+  font-weight: 600;
+}
+
+.page-title,
+.section-title,
+.subsection-title {
+  margin-bottom: .5em;
+}
+
+.page-title {
+  font-size: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+}
+
+.subsection-title {
+  font-size: 1.125rem;
+}
+
+.webpage-link {
+  color: var(--color-text);
+  text-decoration: none;
+  display: var(--webpage-link-display);
+  height: calc((100vh - var(--footer-height)) / 2);
+  width: var(--webpage-link-width);
+}
+
+.webpage-link figure {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.webpage-link figure .logo-company {
+  height: 3em;
+  width: 100%;
+  object-fit: contain;
+}
+
+.webpage-link figure .logo-make {
+  height: 2.5em;
+  width: 100%;
+  object-fit: contain;
+}
+
+.webpage-link figure figcaption {
+  font-size: 0.75em;
+  text-align: center;
+}
+
+footer {
+  display: block;
+  height: var(--footer-height);
+  width: 100%;
+  background-color: var(--color-footer-background);
+}
+
+footer .footer-container {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: .5em 1em;
+}
+
+.external-link::after {
+  /* rightwards arrow with hook */
+  content: "\21AA";
+  color: var(--color-external-link);
+  background-color: var(--color-external-link-background);
+  border-radius: .25em;
+  padding: 0 .125em;
+}
+
+/* Mobile vertical layout (default) */
+:root {
+  --footer-height: 3.3em;
+  --webpage-link-display: block;
+  --webpage-link-width: 100%;
+}
+
+/* TODO: Mobile horizontal layout */
+/* TODO: Tablet horizontal layout */
+/* TODO: Tablet vertical layout */
+/* TODO: Desktop horizontal layout */
+/* TODO: Desktop vertical layout */
+/* TODO: Print layout */
+/* TODO: Accessibility: Visible focus */
+/* TODO: Accessibility: Light theme */
+/* TODO: Accessibility: Dark theme */
+/* TODO: Accessibility: Reduced motion (if needed) */
+/* TODO: Accessibility: High contrast light theme */
+/* TODO: Accessibility: High contrast dark theme */

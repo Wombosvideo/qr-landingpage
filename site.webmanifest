@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "Preisig Autogaragen Schwellbrunn",
+  "short_name": "Preisig Schwellbrunn",
+  "description": "Webseite zur Navigation zu den Webseiten der Auto Preisig AG und der Walter Preisig Autogarage AG aus Schwellbrunn.",
+  "display": "browser",
+  "start_url": ".",
+  "background_color": "#ffffff",
+  "icons": []
+}
