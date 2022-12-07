@@ -134,14 +134,7 @@ body {
   height: calc((100vh - var(--footer-height)) / 2);
   width: var(--webpage-link-width);
   padding: 1em;
-}
-
-.webpage-link--auto-preisig-ag {
-  --make-color: var(--color-subaru);
-}
-
-.webpage-link--walter-preisig-autogarage-ag {
-  --make-color: var(--color-opel);
+  vertical-align: middle;
 }
 
 .webpage-link:first-child {
@@ -150,7 +143,10 @@ body {
 }
 
 .webpage-link:hover {
-  background-color: var(--make-color);
+  background-color: var(--color-hover-background);
+  --auto-preisig-logo-filter: invert(1) hue-rotate(178deg) saturate(10);
+  --walter-preisig-logo-filter: brightness(4) saturate(0.6);
+  --make-logo-filter: invert(1);
 }
 
 .webpage-link figure {
@@ -166,6 +162,7 @@ body {
   width: 100%;
   object-fit: contain;
   align-self: end;
+  transition: filter .2s ease-in-out;
 }
 
 .webpage-link--auto-preisig-ag figure .logo-company {
@@ -184,6 +181,7 @@ body {
   object-fit: contain;
   align-self: start;
   filter: var(--make-logo-filter);
+  transition: filter .2s ease-in-out;
 }
 
 .webpage-link figure .link-caption {
@@ -229,10 +227,15 @@ footer .footer-container {
 /* TODO: Print layout */
 /* Accessibility: Visible focus */
 .webpage-link:focus-visible {
-  background-color: var(--make-color);
+  background-color: var(--color-focus-background);
+  border-radius: 2em;
+}
+.webpage-link:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-focus-outline);
+  outline-offset: 2px;
 }
 /* Accessibility: Light theme */
-@media screen and (prefers-color-scheme: light) {
   :root {
     --color-text: #000;
     --color-background: #fff;
@@ -240,12 +243,12 @@ footer .footer-container {
     --color-footer-background: #dedede;
     --color-link: #2833d1;
     --color-external-link: #000;
-    --color-subaru: rgb(115, 115, 197);
-    --color-opel: rgb(255, 255, 0);
     --auto-preisig-logo-filter: none;
     --walter-preisig-logo-filter: none;
     --make-logo-filter: none;
-  }
+  --color-hover-background: rgb(49, 49, 146);
+  --color-focus-background: rgb(255, 242, 124);
+  --color-focus-outline: rgb(0, 72, 167);
 }
 /* Accessibility: Dark theme */
 @media screen and (prefers-color-scheme: dark) {
@@ -256,15 +259,12 @@ footer .footer-container {
     --color-line: #3c3c3c;
     --color-link: #575cbb;
     --color-external-link: #fff;
-    --color-subaru: rgb(49, 49, 146);
-    --color-opel: rgb(99, 99, 0);
     --auto-preisig-logo-filter: invert(1) hue-rotate(178deg) saturate(10);
-    --walter-preisig-logo-filter: brightness(2);
+    --walter-preisig-logo-filter: brightness(4) saturate(0.6);
     --make-logo-filter: invert(1);
-  }
-
-  .webpage-link--walter-preisig-autogarage-ag:hover .logo-company {
-    filter: brightness(5) hue-rotate(45deg);
+    --color-hover-background: rgb(33, 33, 85);
+    --color-focus-background: rgb(59, 54, 7);
+    --color-focus-outline: rgb(255, 255, 255);
   }
 }
 /* Accessibility: Reduced motion */
