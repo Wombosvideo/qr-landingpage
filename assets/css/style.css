@@ -36,9 +36,9 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-menu:not(article menu),
-ol:not(article ol),
-ul:not(article ul) {
+menu:not(section menu),
+ol:not(section ol),
+ul:not(section ul) {
   list-style: none;
 }
 
@@ -48,8 +48,8 @@ ul {
   padding-left: 0;
 }
 
-article ol,
-article ul {
+section ol,
+section ul {
   list-style-position: inside;
 }
 
@@ -260,16 +260,16 @@ a:focus-visible {
   outline-offset: 2px;
 }
 /* Accessibility: Light theme */
-  :root {
-    --color-text: #000;
-    --color-background: #fff;
-    --color-line: #c4c4c4;
-    --color-footer-background: #dedede;
-    --color-link: #2833d1;
-    --color-external-link: #000;
-    --auto-preisig-logo-filter: none;
-    --walter-preisig-logo-filter: none;
-    --make-logo-filter: none;
+:root {
+  --color-text: #000;
+  --color-background: #fff;
+  --color-line: #c4c4c4;
+  --color-footer-background: #dedede;
+  --color-link: #2833d1;
+  --color-external-link: #000;
+  --auto-preisig-logo-filter: none;
+  --walter-preisig-logo-filter: none;
+  --make-logo-filter: none;
   --color-hover-background: rgb(49, 49, 146);
   --color-focus-background: rgb(255, 242, 124);
   --color-focus-outline: rgb(0, 72, 167);
