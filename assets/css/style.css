@@ -76,8 +76,30 @@ body {
   background-color: var(--color-background);
 }
 
+.page--imprint {
+  max-width: 64rem;
+  padding: 2rem 1.5rem;
+  margin: 0 auto;
+}
+
 .normal-text {
   font-weight: 400;
+}
+.page--imprint .normal-text {
+  margin-bottom: .75em;
+}
+
+.page--imprint > section {
+  margin-bottom: 1.75em;
+}
+.page--imprint > section section,
+.list {
+  margin-bottom: 1.25em;
+}
+
+.list-item {
+  margin-bottom: .25em;
+  padding-left: 1em;
 }
 
 .bold-text,
