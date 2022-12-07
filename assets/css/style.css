@@ -70,10 +70,17 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  line-height: 1.3;
+  font-size: 0;
+  line-height: 0;
   color: var(--color-text);
   background-color: var(--color-background);
+  white-space: nowrap;
+}
+
+body > :is(h1, a, section, footer) {
+  font-size: 1rem;
+  line-height: 1.3;
+  white-space: normal;
 }
 
 .page--imprint {
@@ -131,8 +138,9 @@ body {
   color: var(--color-text);
   text-decoration: none;
   display: var(--webpage-link-display);
-  height: calc((100vh - var(--footer-height)) / 2);
+  height: var(--webpage-link-height);
   width: var(--webpage-link-width);
+  transition: background-color .2s ease-in-out;
   padding: 1em;
   vertical-align: middle;
 }
@@ -210,21 +218,26 @@ footer .footer-container {
   padding: 0 .125em;
 }
 
-/* Mobile vertical layout (default) */
+/* Vertical layout (default) */
 :root {
   --footer-height: 3.75em;
   --webpage-link-display: block;
   --webpage-link-width: 100%;
+  --webpage-link-height: calc((100vh - var(--footer-height)) / 2);
   --bottom-border: 1px solid var(--color-line);
   --right-border: none;
 }
 
-/* TODO: Mobile horizontal layout */
-/* TODO: Tablet horizontal layout */
-/* TODO: Tablet vertical layout */
-/* TODO: Desktop horizontal layout */
-/* TODO: Desktop vertical layout */
-/* TODO: Print layout */
+/* Horizontal layout */
+@media screen and (orientation: landscape) {
+  :root {
+    --webpage-link-display: inline-block;
+    --webpage-link-width: calc(50% - 1px);
+    --webpage-link-height: calc(100vh - var(--footer-height));
+    --bottom-border: none;
+    --right-border: 1px solid var(--color-line);
+  }
+}
 /* Accessibility: Visible focus */
 .webpage-link:focus-visible {
   background-color: var(--color-focus-background);
