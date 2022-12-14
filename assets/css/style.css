@@ -15,123 +15,89 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, strong, ul, li, 
+figure, figcaption, footer, header, section {
   margin: 0;
   padding: 0;
   font: inherit;
   font-size: 100%;
   vertical-align: baseline;
 }
-
-menu:not(section menu),
-ol:not(section ol),
-ul:not(section ul) {
-  list-style: none;
-}
-
-menu,
-ol,
-ul {
-  padding-left: 0;
-}
-
-section ol,
-section ul {
-  list-style-position: inside;
-}
-
-a {
-  text-underline-position: under;
-  text-decoration-thickness: 8;
-  color: var(--color-link);
-}
-
 html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 }
-
-:focus:not(:focus-visible) {
-  outline: none;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: 0;
-  line-height: 0;
+  font-size: 0; /* remove space between inline-block elements */
+  line-height: 0; /* remove space between inline-block elements */
   color: var(--color-text);
   background-color: var(--color-background);
-  white-space: nowrap;
+  white-space: nowrap; /* remove space between inline-block elements */
 }
-
-body > :is(h1, a, section, footer) {
+body > :is(a, footer, section) {
   font-size: 1rem;
   line-height: 1.3;
   white-space: normal;
 }
-
 .page--imprint {
   max-width: 64rem;
   padding: 2rem 1.5rem;
   margin: 0 auto;
+  word-break: break-word;
+}
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
-.normal-text {
+/* Text */
+p {
   font-weight: 400;
 }
-.page--imprint .normal-text {
+.page--imprint p {
   margin-bottom: .75em;
 }
+h1, h2, h3,
+strong {
+  font-weight: 600;
+}
+h1, h2, h3 {
+  margin-bottom: .5em;
+}
+h1 {
+  font-size: 2rem;
+  line-height: 1.3;
+  white-space: normal;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.125rem;
+}
 
+/* Spacing */
 .page--imprint > section {
   margin-bottom: 1.75em;
 }
 .page--imprint > section section,
-.list {
+ul {
   margin-bottom: 1.25em;
 }
-
-.list-item {
+ul {
+  padding-left: 0;
+  list-style-position: inside;
+}
+li {
   margin-bottom: .25em;
   padding-left: 1em;
 }
 
-.bold-text,
-.page-title,
-.section-title,
-.subsection-title {
-  font-weight: 600;
-}
-
-.page-title,
-.section-title,
-.subsection-title {
-  margin-bottom: .5em;
-}
-
-.page-title {
-  font-size: 2rem;
-}
-
-.section-title {
-  font-size: 1.5rem;
-}
-
-.subsection-title {
-  font-size: 1.125rem;
+/* Links */
+a {
+  text-underline-position: under;
+  text-decoration-thickness: 8;
+  color: var(--color-link);
 }
 
 .webpage-link {
@@ -204,7 +170,7 @@ footer {
   margin-bottom: -1px;
 }
 
-footer .footer-container {
+.footer-container {
   max-width: 64rem;
   margin: 0 auto;
   padding: .5em 1em;
