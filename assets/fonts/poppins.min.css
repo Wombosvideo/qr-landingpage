@@ -1,0 +1,11 @@
+/*
+ * Font Name: Poppins
+ * Designer: Indian Type Foundry
+ * Co-Designer: Jonny Pinhorn
+ * License: SIL Open Font License, 1.1
+ * License URL: http://scripts.sil.org/OFL
+ * GitHub: https://github.com/itfoundry/poppins
+ *
+ * Downloaded from https://google-webfonts-helper.herokuapp.com/fonts/poppins?subsets=latin
+ */
+@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(poppins-v20-latin-regular.eot);src:local(''),url('poppins-v20-latin-regular.eot?#iefix') format('embedded-opentype'),url(poppins-v20-latin-regular.woff2) format('woff2'),url(poppins-v20-latin-regular.woff) format('woff'),url(poppins-v20-latin-regular.ttf) format('truetype'),url('poppins-v20-latin-regular.svg#Poppins') format('svg')}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(poppins-v20-latin-600.eot);src:local(''),url('poppins-v20-latin-600.eot?#iefix') format('embedded-opentype'),url(poppins-v20-latin-600.woff2) format('woff2'),url(poppins-v20-latin-600.woff) format('woff'),url(poppins-v20-latin-600.ttf) format('truetype'),url('poppins-v20-latin-600.svg#Poppins') format('svg')}
