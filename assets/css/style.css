@@ -84,6 +84,7 @@ h3 {
 ul,
 .space-below {
   margin-bottom: 1.25em;
+  display: block;
 }
 ul {
   padding-left: 0;
